@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pharmaApp2";
+option java_outer_classname = "Service2OuterClass";
+
+service Service2{
+
+	rpc ArrivalTimeUpdate (TimeUpdateRequest) returns (stream APIResponse);
+	
+}
+
+message TimeUpdateRequest {
+
+	string requestTime = 1;
+	
+}
+
+message APIResponse{
+
+	int32 responseTime1 = 1;
+	int32 responseTime2 = 2;
+	int32 responseTime3 = 3;
+	int32 responseTime4 = 4;
+	int32 responseTime5 = 5;
+	int32 responseTime6 = 6;
+	
+}
